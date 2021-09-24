@@ -29,11 +29,6 @@ svg {
 .hihat-pad {
   background: rgb(224, 194, 160);
 }
-.kick,
-.snare,
-.hihat {
-  display: flex;
-}
 .kick-pad.active {
   background: rgb(59, 197, 231);
 }
@@ -42,6 +37,13 @@ svg {
 }
 .hihat-pad.active {
   background: rgb(241, 158, 64);
+}
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .hihat-track,
 .snare-track,
@@ -52,12 +54,10 @@ svg {
   justify-content: space-between;
   margin-top: 5rem;
 }
-.sequencer {
+.kick,
+.snare,
+.hihat {
   display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .controls {
   display: flex;
@@ -91,4 +91,12 @@ svg {
 select {
   padding: 1rem;
   font-size: 1rem;
+}
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
